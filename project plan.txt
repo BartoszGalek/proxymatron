@@ -5,5 +5,5 @@ Module plan:
 	3. create server, piping files to http responses
 		3.1 create test for server piping files
 	4. create logic to chose type of request to pipe
-	5. add logic to proxy server
+	5. add logic to proxy server - keep piping server in a separate module
 		1.2 add new test for http proxy server with piping and logic
