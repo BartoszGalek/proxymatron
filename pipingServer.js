@@ -1,8 +1,14 @@
 var path = require('path'),
-    fs   = require('fs');
+    fs   = require('fs'),
+    http = require('http'),
+    port = 4000
+    handleRequest,
+    server;
 
-require('http').createServer(function(req, res) {
+handleRequest = function(req, res) {
+  //TODO change to path determining child_process.execFile(file, /*, args, options, callback, */);
   var file = path.normalize(req.url);
+  
   path.exists(file, function(exists) {
     if (exists) {
       fs.stat(file, function(err, stat) {
@@ -24,5 +30,8 @@ require('http').createServer(function(req, res) {
       res.end('Not found');
     }
   })
-}).listen(4000);
+};
 
+server = http.createServer(handleRequest);
+
+server.listen(port);

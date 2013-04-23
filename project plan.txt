@@ -2,6 +2,7 @@ Module plan:
 	1. create proxy server - port, destination address and port as parameters
 		1.1 create test for http proxy server
 	2. create and describe json configuration file
+		2.1add option to decorate files - file would be loaded from server and decoration would be added into a script at the specified position
 	3. create server, piping files to http responses
 		3.1 create test for server piping files
 	4. create logic to chose type of request to pipe

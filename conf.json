@@ -1,0 +1,16 @@
+{
+
+	// global host and port
+	hostname: 'www.google.com',
+	port: 80,
+	// path: '/upload',
+	// method: 'POST'
+  	path2file : {
+  		{
+  			// original request part
+  			reqestPart : '/something.js',
+  			//override file path
+  			overridePath : '/something.js'
+  		}
+ 	}
+}
